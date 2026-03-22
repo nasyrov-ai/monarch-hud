@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "id": "item_001",
+      "name": "Shadow Lip-Sync Engine (Wav2Lip-HD)",
+      "rank": "S",
+      "type": "Visual Synthesis Artifact",
+      "description": "Allows the Player to breathe life into static images, creating high-fidelity VSL videos.",
+      "status": "Offline (Ready for Activation)",
+      "location": "/Users/nsrv/.openclaw/workspace/skills/wav2lip-local"
+    },
+    {
+      "id": "item_002",
+      "name": "ElevenLabs Voice Forge",
+      "rank": "A",
+      "type": "Sonic Alchemy",
+      "description": "Generates human-like voices for any GEO. Core asset of the VSL-Automation pipeline.",
+      "status": "Active (API Integration Ready)"
+    },
+    {
+      "id": "item_003",
+      "name": "Antigravity Image Generator",
+      "rank": "A",
+      "type": "Creative Manifestation",
+      "description": "Generates high-resolution visuals via Gemini 3 Pro.",
+      "status": "Active"
+    },
+    {
+      "id": "item_004",
+      "name": "Git Protection Layer",
+      "rank": "S",
+      "type": "System Defense",
+      "description": "Protects the core configuration (openclaw.json) from corruption and resets.",
+      "status": "Active (Version Control Engaged)"
+    },
+    {
+      "id": "item_005",
+      "name": "Supabase Master Key",
+      "rank": "Quest",
+      "type": "Quest Item",
+      "description": "Provides full access to the System's memory and stats.",
+      "status": "In Player's Possession"
+    }
+  ]
+}
