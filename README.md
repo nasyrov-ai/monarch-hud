@@ -1,5 +1,7 @@
 # Monarch HUD — Gamified Personal Dashboard
 
+[![CI](https://github.com/nasyrov-ai/monarch-hud/actions/workflows/ci.yml/badge.svg)](https://github.com/nasyrov-ai/monarch-hud/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A cyberpunk-styled personal HUD that turns daily productivity into a game. Track quests, manage inventory, level up skills, and monitor stats — all through a sci-fi terminal interface.
 
 ## Features
