@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Monarch HUD — Gamified Personal Dashboard
 
-## Getting Started
+A cyberpunk-styled personal HUD that turns daily productivity into a game. Track quests, manage inventory, level up skills, and monitor stats — all through a sci-fi terminal interface.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Quest Log** — track daily and weekly goals as in-game quests
+- **Inventory System** — manage tools, resources, and achievements
+- **Skill Tree** — visualize skill progression across domains
+- **Stat Bars** — real-time progress indicators with animated HUD elements
+- **Terminal Aesthetic** — cyan-on-dark cyberpunk UI with glow effects
+- **Real-time Updates** — WebSocket integration for live data sync
+
+## Architecture
+
+```
+┌─────────────────┐     ┌──────────────────┐     ┌─────────────┐
+│   Next.js App    │────▶│   Supabase DB    │────▶│  Real-time   │
+│  (React + TS)    │     │  (quests, stats) │     │  WebSocket   │
+└─────────────────┘     └──────────────────┘     └─────────────┘
+        │
+        ▼
+┌─────────────────┐
+│  Framer Motion   │
+│  (animations)    │
+└─────────────────┘
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Technology | Purpose |
+|-----------|---------|
+| Next.js 16 | App framework with App Router |
+| TypeScript | Type safety |
+| Tailwind CSS 4 | Utility-first styling |
+| Framer Motion | Animations and transitions |
+| Supabase | Database and real-time subscriptions |
+| Socket.io | Live data synchronization |
+| Lucide React | Icon system |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Quick Start
 
-## Learn More
+```bash
+git clone https://github.com/nasyrov-ai/monarch-hud.git
+cd monarch-hud
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+monarch-hud/
+├── app/
+│   ├── api/          # API routes (files, processes, skills)
+│   ├── page.tsx      # Main HUD interface
+│   └── layout.tsx    # Root layout
+├── src/
+│   ├── components/   # UI: StatBar, QuestLog, Inventory, Terminal
+│   ├── hooks/        # Custom hooks: usePlayerStats, useQuests
+│   ├── services/     # Sound effects service
+│   ├── lib/          # Supabase client, inventory data
+│   └── types/        # TypeScript type definitions
+└── tailwind.config.ts
+```
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
